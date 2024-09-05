@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         //数値を保持する変数
         var value : Int = 0
         // AC(All Clear)フラグ
@@ -19,22 +20,22 @@ class MainActivity : AppCompatActivity() {
         var operator : String = "no"
 
         //各ボタン情報
-        val buttonZero  : Button = findViewById(R.id.zero)
-        val buttonOne   : Button = findViewById(R.id.one)
-        val buttonTwo   : Button = findViewById(R.id.two)
-        val buttonThree : Button = findViewById(R.id.three)
-        val buttonFour  : Button = findViewById(R.id.four)
-        val buttonFive  : Button = findViewById(R.id.five)
-        val buttonSix   : Button = findViewById(R.id.six)
-        val buttonSeven : Button = findViewById(R.id.seven)
-        val buttonEight : Button = findViewById(R.id.eight)
-        val buttonNine  : Button = findViewById(R.id.nine)
-        val buttonAdd   : Button = findViewById(R.id.add)
+        val buttonZero      : Button = findViewById(R.id.zero)
+        val buttonOne        : Button = findViewById(R.id.one)
+        val buttonTwo        : Button = findViewById(R.id.two)
+        val buttonThree      : Button = findViewById(R.id.three)
+        val buttonFour       : Button = findViewById(R.id.four)
+        val buttonFive       : Button = findViewById(R.id.five)
+        val buttonSix        : Button = findViewById(R.id.six)
+        val buttonSeven      : Button = findViewById(R.id.seven)
+        val buttonEight      : Button = findViewById(R.id.eight)
+        val buttonNine       : Button = findViewById(R.id.nine)
+        val buttonAdd        : Button = findViewById(R.id.add)
         val buttonMultiply   : Button = findViewById(R.id.multiply)
-        val buttonSub   : Button = findViewById(R.id.sub)
-        val buttonDiv   : Button = findViewById(R.id.div)
-        val buttonEqual : Button = findViewById(R.id.equal)
-        val buttonAc    : Button = findViewById(R.id.ac)
+        val buttonSub        : Button = findViewById(R.id.sub)
+        val buttonDiv        : Button = findViewById(R.id.div)
+        val buttonEqual      : Button = findViewById(R.id.equal)
+        val buttonAc         : Button = findViewById(R.id.ac)
 
         //計算結果の表示
         val resultView : TextView = findViewById(R.id.result)
@@ -93,7 +94,9 @@ class MainActivity : AppCompatActivity() {
         checkCalculator = false
       }
       //ボタンが押されたことを検知する処理
-
+      buttonAc.setOnClickListener() {
+          acButtonAction()
+      }
       buttonZero.setOnClickListener() {
         numberButtonAction("0")
       }
